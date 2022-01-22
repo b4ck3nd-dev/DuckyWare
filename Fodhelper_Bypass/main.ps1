@@ -21,4 +21,6 @@ Remove-Item "HKCU:\Software\Classes\ms-settings\" -Recurse -Force
  
 }
 
+FodhelperBypass;
+
 #Not mine!!! Just for a test
